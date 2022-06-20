@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HUG Filmes</title>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript" src="search.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light cabecalho">
+   <a href="index.html"><img src="hug_filmes.png" class="logo" style="margin-left: 30px;"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <center>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          
+          <li class="nav-item">
+            <a class="nav-link" href="#destaques">EM DESTAQUE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#entrevistas">ENTREVISTAS E MAKING OF</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#lancamento">LANÇAMENTOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#avaliações">AVALIAÇÕES</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#novidades">NOVIDADES</a>
+          </li> -->
+    </center>
+        
+        
+      </ul>
+      <div style="display: flex; flex-direction: row;">
+        <input class="form-control mr-sm-2" id="search" placeholder="Pesquisar" aria-label="Pesquisar" style="width: 150px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="btn_search">Buscar</button>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+    <div id="destaques" style="background-color: #F8F9FA; width: 100%; height: 400px; margin-top: 10px; ">
+      <center><H1 style="color: rgb(0, 0, 0)">Em Destaque</H1></center>
+      <div id="containerDestaques" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+      </div>
+    </div>
+    
+    
+    
+    
+    <div id="entrevistas" style="background-color: #F8F9FA; width: 100%; height: 500px; margin-top: 10px;">
+      <center><H1 style="color: rgb(0, 0, 0)">Entrevistas e making of</H1></center>
+      
+      <div style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+        <div id="containerVideoEInfo">
+          <iframe width="350px" height="200px" src="https://www.youtube.com/embed/CWZ0lw1DAuE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div style="display: flex; align-items: center;"> <b> Filme: </b> Minha mãe é uma peça 3</div>
+          <div style="display: flex;"><b>Diretores: </b> Susana Garcia </div>
+          <div style="display: flex;"><b>Roteiristas: </b> Paulo Gustavo, Fil Braz, Susana Garcia</div>
+          <div style="display: flex;"><b>Estreia: </b> 26 de dezembro de 2019</div>
+        </div>
+        
+        <div id="containerVideoEInfo">
+          <iframe width="350px" height="200px" src="https://www.youtube.com/embed/rcUBB54Q2yM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div style="display: flex; align-items: center;"><b>Filme: </b> Cidade de Deus</div>
+          <div style="display: flex;"><b>Diretores: </b> Fernando Meirelles, Kátia Lund </div>
+          <div style="display: flex;"><b>Roteiristas: </b> Bráulio Mantovani</div>
+          <div style="display: flex;"><b>Estreia: </b> 30 de agosto de 2002</div>
+        </div>
+        
+        <div id="containerVideoEInfo">
+          <iframe width="350px" height="200px" src="https://www.youtube.com/embed/7CDgQUdTOCg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div style="display: flex; align-items: center;"><b>Filme: </b> Cidade dos Homens</div>
+          <div style="display: flex;"><b>Diretores: </b> Paulo Morelli</div>
+          <div style="display: flex;"><b>Roteiristas: </b> Paulo Morelli, Elena Soárez</div>
+          <div style="display: flex;"><b>Estreia: </b> 31 de agosto de 2007</div>
+        </div>
+      </div>
+    </div>
+    
+   
+    <div class="row">
+      <div class="col-sm-8">
+        
+        <div class="lancamento" id="lancamento" style="background-color:#F8F9FA; margin-top: 10px;">
+          <div style="margin: 0px 50px 10px 50px;">
+            <center><H1 style="color: rgb(0, 0, 0)">Lançamento</H1></center>
+            <div style="display: flex; flex-direction: row;">
+              <div id="imagemLancamento" style="width: 300px; height: 500px; margin-right: 20px;"></div>
+              <div>
+                <H2 id="nomeDoLancamento"></H2>
+                <b>Sinopse: </b> <p id="sinopse"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-sm-2">
+        <div class="Sobre" style="background-color:#F8F9FA; width: 237%; height: 96.5%; margin-top: 10px; margin-left: -40px;">
+        <center>
+          <h1 style="color: rgb(0, 0, 0);">Sobre</h1>
+            <p style="width: 45%; height: 30%;">Esse site foi desenvolvido para um trabalho de Portal de Filmes para a disciplina Desenvolvimento de Interefaces WEB da PUC Minas, unidade Praça da Liberdade, Belo Horizonte. </p>
+          <h1 style="color: rgb(0, 0, 0); margin-top: 15%;">Editorial</h1>
+              <p>  Redação: Gustavo Araújo        </p>
+              <p>  Pesquisa: Gustavo Araújo       </p>
+              <p>  Gerente Geral: Gustavo Araújo  </p>
+        </center>
+        </div>
+      </div>
+    </div>
+   
+   
+    <center>
+      <div class="divult" id="avaliações" style="height: 350px; margin-top: 10px;">
+        <H1 style="color: rgb(0, 0, 0)">Últimas avaliações do Site</H1>
+        <div class="containerAvaliacoes" style="margin-top: 30px;">
+          <div class="cardAvaliacao">
+            <img src="jacinto.png" alt="" style="width: 120px;">
+            <H3>Jacinto Pereira Jr.</H3>
+            <div class="avaliacao">
+            <p>Site bacana, fácil de usar porém as cores me confundiram um pouco.</p>
+            <div>
+              04/11/2020
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div class="cardAvaliacao" style="">
+          <img src="adal.png" alt="" style="width: 120px;">
+          <H3>Adalmária Mesquita</H3>
+          <div class="avaliacao">
+            <p>Gostei bastante do site, muito intuitivo, fácil de usar e possui um conteúdo de qualidade!</p>
+            <div>
+              27/11/2020
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        
+        <div class="cardAvaliacao">
+          <img src="jonas.png" alt="" style="width: 120px;">
+          <H3>Jonas Mendes</H3> 
+          <div class="avaliacao">
+            <p>Gostei do formato do site e da sua usabilidade, vou recomendar para amigos.</p>
+            <div>
+              01/12/2020
+              <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div> </center>
+    
+   <!--  <div class="divnov" id="novidades" style="width: 100%; height: 500px; margin-top: 10px;">
+      <h1 style="margin-left: 80px; color: rgb(0, 0, 0);"> Novidades</h1>
+      <div>
+    </div> -->
+      
+    
+  </main>
+  <footer style="background-color: #F8F9FA; margin-top: 05px;">
+    <center> <h5 style="font-family: unset;">Hug Filmes. Todos os direitos reservados 2020.</h5> </center> 
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
